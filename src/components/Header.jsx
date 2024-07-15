@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { motion } from 'framer-motion'
 
 const Header = () => {
   return (
@@ -16,9 +17,13 @@ const Header = () => {
           />
         </svg>
       </div>
-      <div className="title">
+      <motion.div 
+        initial={{ y:-250 }}
+        animate={{ y:-10 }}
+        transition={{ duration: .5 }}
+        className="title">
         <h1>Pizza Joint</h1>
-      </div>
+      </motion.div>
     </header>
   )
 }
