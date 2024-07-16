@@ -15,14 +15,23 @@ const Toppings = ({ addTopping, pizza }) => {
         {toppings.map(topping => {
           let spanClass = pizza.toppings.includes(topping) ? 'active' : '';
           return (
-            <li key={topping} onClick={() => addTopping(topping)}>
+            <motion.li key={topping} onClick={() => addTopping(topping)}
+              whileHover={{
+                scale: 1.1,
+                originX: 0, // to set tranform origin to initial position
+              }}
+            >
               <span className={spanClass}>{ topping }</span>
-            </li>
+            </motion.li>
           )
         })}
       </ul>
 
-      <Link to="/order">
+      <Link
+        whileHover={{
+          scale: 1.1
+        }}
+      to="/order">
         <motion.button
           whileHover={{ 
             scale: 1.2,
