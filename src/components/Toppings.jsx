@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
@@ -22,9 +23,19 @@ const Toppings = ({ addTopping, pizza }) => {
       </ul>
 
       <Link to="/order">
-        <button>
+        <motion.button
+          whileHover={{ 
+            scale: 1.2,
+            textShadow: "0px 0px 8px rgb(255, 255, 255)",
+            boxShadow: "0px 0px 8px rgb(255, 255, 255)"
+           }}
+          transition={{ 
+            type: "spring",
+            stiffness: 220
+           }}
+        >
           Order
-        </button>
+        </motion.button>
       </Link>
 
     </div>
