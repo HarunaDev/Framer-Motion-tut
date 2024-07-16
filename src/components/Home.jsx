@@ -10,7 +10,7 @@ const Home = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 5 }}
+      transition={{ duration: 3, delay: .5 }}
       className="home container">
       <h2>
         Welcome to Pizza Joint
@@ -19,7 +19,7 @@ const Home = () => {
         <motion.button
         initial={{ fontSize: "1em" }} 
         animate={{ color: "yellow", fontSize: "3em" }}
-        transition={{ duration: .5 }}
+        transition={{ duration: .5, delay: .5 }}
         >
           Create Your Pizza
         </motion.button>
