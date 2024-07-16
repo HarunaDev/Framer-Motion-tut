@@ -26,7 +26,7 @@ const Base = ({ addBase, pizza }) => {
         <motion.div 
           initial={{ x: -250, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: .5 }}
+          transition={{ duration: .5, type: "spring" ,stiffness: 250 }}
           className="next">
           <Link to="/toppings">
             <button>Next</button>
